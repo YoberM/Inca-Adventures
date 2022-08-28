@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/scripts/MenuScene/SettingsMenu/TwoSideButton.gd" type="Script" id=1]
+
+[sub_resource type="InputEventAction" id=3]
+action = "ui_left"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_right"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[node name="TwoSideButton" type="HBoxContainer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+focus_neighbour_left = NodePath("Left")
+focus_neighbour_right = NodePath("Right")
+focus_mode = 2
+script = ExtResource( 1 )
+color_focus = Color( 1, 0.988235, 0.14902, 1 )
+color_pressed = Color( 0.85098, 0.819608, 0, 1 )
+color_normal = Color( 1, 1, 1, 1 )
+
+[node name="Left" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 40.0
+focus_mode = 0
+mouse_filter = 1
+size_flags_horizontal = 3
+disabled = true
+shortcut_in_tooltip = false
+shortcut = SubResource( 4 )
+align = 0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_right = 24.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+align = 1
+valign = 1
+
+[node name="Right" type="Button" parent="."]
+margin_left = 28.0
+margin_right = 40.0
+margin_bottom = 40.0
+focus_mode = 0
+mouse_filter = 1
+size_flags_horizontal = 3
+disabled = true
+shortcut_in_tooltip = false
+shortcut = SubResource( 2 )
+align = 2
+
+[connection signal="focus_entered" from="." to="." method="_on_TwoSideButton_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_TwoSideButton_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_TwoSideButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_TwoSideButton_mouse_exited"]
+[connection signal="button_down" from="Left" to="." method="_on_Left_button_down"]
+[connection signal="button_up" from="Left" to="." method="_on_Left_button_up"]
+[connection signal="button_down" from="Right" to="." method="_on_Right_button_down"]
+[connection signal="button_up" from="Right" to="." method="_on_Right_button_up"]

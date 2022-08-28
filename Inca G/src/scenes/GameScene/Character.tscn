@@ -1,0 +1,106 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://assets/character/Slide__004.png" type="Texture" id=1]
+[ext_resource path="res://assets/character/Dead__002.png" type="Texture" id=2]
+[ext_resource path="res://assets/character/Jump__007.png" type="Texture" id=3]
+[ext_resource path="res://assets/character/Jump__002.png" type="Texture" id=4]
+[ext_resource path="res://assets/character/Jump__009.png" type="Texture" id=5]
+[ext_resource path="res://assets/character/Slide__002.png" type="Texture" id=6]
+[ext_resource path="res://assets/character/Slide__005.png" type="Texture" id=7]
+[ext_resource path="res://assets/character/Slide__001.png" type="Texture" id=8]
+[ext_resource path="res://assets/character/Slide__008.png" type="Texture" id=9]
+[ext_resource path="res://assets/character/Dead__008.png" type="Texture" id=10]
+[ext_resource path="res://assets/character/Dead__007.png" type="Texture" id=11]
+[ext_resource path="res://assets/character/Jump__005.png" type="Texture" id=12]
+[ext_resource path="res://assets/character/Idle__008.png" type="Texture" id=13]
+[ext_resource path="res://assets/character/Jump__008.png" type="Texture" id=14]
+[ext_resource path="res://assets/character/Idle__007.png" type="Texture" id=15]
+[ext_resource path="res://assets/character/Dead__000.png" type="Texture" id=16]
+[ext_resource path="res://assets/character/Dead__009.png" type="Texture" id=17]
+[ext_resource path="res://assets/character/Idle__009.png" type="Texture" id=18]
+[ext_resource path="res://assets/character/Slide__006.png" type="Texture" id=19]
+[ext_resource path="res://assets/character/Jump__006.png" type="Texture" id=20]
+[ext_resource path="res://assets/character/Dead__001.png" type="Texture" id=21]
+[ext_resource path="res://assets/character/Slide__003.png" type="Texture" id=22]
+[ext_resource path="res://assets/character/Jump__000.png" type="Texture" id=23]
+[ext_resource path="res://assets/character/Dead__006.png" type="Texture" id=24]
+[ext_resource path="res://assets/character/Jump__001.png" type="Texture" id=25]
+[ext_resource path="res://assets/character/Slide__000.png" type="Texture" id=26]
+[ext_resource path="res://assets/character/Idle__003.png" type="Texture" id=27]
+[ext_resource path="res://assets/character/Slide__007.png" type="Texture" id=28]
+[ext_resource path="res://assets/character/Jump__003.png" type="Texture" id=29]
+[ext_resource path="res://assets/character/Jump__004.png" type="Texture" id=30]
+[ext_resource path="res://assets/character/Idle__005.png" type="Texture" id=31]
+[ext_resource path="res://assets/character/Idle__004.png" type="Texture" id=32]
+[ext_resource path="res://assets/character/Idle__006.png" type="Texture" id=33]
+[ext_resource path="res://assets/character/Dead__003.png" type="Texture" id=34]
+[ext_resource path="res://assets/character/Slide__009.png" type="Texture" id=35]
+[ext_resource path="res://assets/character/Dead__004.png" type="Texture" id=36]
+[ext_resource path="res://assets/character/Dead__005.png" type="Texture" id=37]
+[ext_resource path="res://assets/character/Run__003.png" type="Texture" id=38]
+[ext_resource path="res://assets/character/Run__005.png" type="Texture" id=39]
+[ext_resource path="res://assets/character/Run__001.png" type="Texture" id=40]
+[ext_resource path="res://assets/character/Run__008.png" type="Texture" id=41]
+[ext_resource path="res://assets/character/Run__009.png" type="Texture" id=42]
+[ext_resource path="res://assets/character/Run__007.png" type="Texture" id=43]
+[ext_resource path="res://assets/character/Idle__001.png" type="Texture" id=44]
+[ext_resource path="res://assets/character/Run__000.png" type="Texture" id=45]
+[ext_resource path="res://assets/character/Run__002.png" type="Texture" id=46]
+[ext_resource path="res://assets/character/Idle__000.png" type="Texture" id=47]
+[ext_resource path="res://assets/character/Run__006.png" type="Texture" id=48]
+[ext_resource path="res://assets/character/Idle__002.png" type="Texture" id=49]
+[ext_resource path="res://assets/character/Run__004.png" type="Texture" id=50]
+[ext_resource path="res://src/scenes/GameScene/Character.gd" type="Script" id=51]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 19.0
+height = 96.0
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 21 ), ExtResource( 2 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "dead",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 47 ), ExtResource( 44 ), ExtResource( 49 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 20 ), ExtResource( 3 ), ExtResource( 14 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 40 ), ExtResource( 46 ), ExtResource( 38 ), ExtResource( 50 ), ExtResource( 39 ), ExtResource( 48 ), ExtResource( 43 ), ExtResource( 41 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 22 ), ExtResource( 1 ), ExtResource( 7 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 9 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "slide",
+"speed": 10.0
+} ]
+
+[node name="Character" type="KinematicBody2D"]
+script = ExtResource( 51 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="pivot" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="pivot"]
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = 5
+speed_scale = 1.5
+playing = true
+
+[node name="DamageTimer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="pivot/AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="DamageTimer" to="." method="_on_DamageTimer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://addons/handy_components/DebrisBody2D.gd" type="Script" id=2]
+[ext_resource path="res://src/scripts/DeveloperScene/AsulconS/DebrisPlayer.gd" type="Script" id=3]
+
+[node name="DebrisPlayer" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="DebrisBody2D" type="Node2D" parent="."]
+position = Vector2( 512, 256 )
+script = ExtResource( 2 )
+random_color = false
+
+[node name="Polygon2D" type="Polygon2D" parent="DebrisBody2D"]
+texture = ExtResource( 1 )
+polygon = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )

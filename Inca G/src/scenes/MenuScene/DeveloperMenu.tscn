@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/scripts/MenuScene/DeveloperMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/themes/TestTheme.tres" type="Theme" id=2]
+[ext_resource path="res://src/scenes/MenuScene/MainMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/scenes/DeveloperScene/Miscrits.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/scenes/DeveloperScene/Poroto.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/scenes/DeveloperScene/AsulconS.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/DeveloperScene/Paco.tscn" type="PackedScene" id=7]
+
+[node name="DeveloperMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+script = ExtResource( 1 )
+main_menu = ExtResource( 3 )
+asulcons = ExtResource( 6 )
+miscrits = ExtResource( 4 )
+poroto = ExtResource( 5 )
+paco = ExtResource( 7 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -67.5
+margin_top = -58.0
+margin_right = 67.5
+margin_bottom = 58.0
+
+[node name="RunGame" type="Button" parent="VBoxContainer"]
+margin_right = 570.0
+margin_bottom = 90.0
+text = "RunGame"
+
+[node name="AsulconS" type="Button" parent="VBoxContainer"]
+margin_top = 94.0
+margin_right = 570.0
+margin_bottom = 184.0
+text = "AsulconS"
+
+[node name="Miscrits" type="Button" parent="VBoxContainer"]
+margin_top = 188.0
+margin_right = 570.0
+margin_bottom = 278.0
+text = "Miscrits"
+
+[node name="Poroto" type="Button" parent="VBoxContainer"]
+margin_top = 282.0
+margin_right = 570.0
+margin_bottom = 372.0
+text = "Poroto"
+
+[node name="Paco" type="Button" parent="VBoxContainer"]
+margin_top = 376.0
+margin_right = 570.0
+margin_bottom = 466.0
+text = "Paco"
+
+[connection signal="pressed" from="VBoxContainer/RunGame" to="." method="_on_RunGame_pressed"]
+[connection signal="pressed" from="VBoxContainer/AsulconS" to="." method="_on_AsulconS_pressed"]
+[connection signal="pressed" from="VBoxContainer/Miscrits" to="." method="_on_Miscrits_pressed"]
+[connection signal="pressed" from="VBoxContainer/Poroto" to="." method="_on_Poroto_pressed"]
+[connection signal="pressed" from="VBoxContainer/Paco" to="." method="_on_Paco_pressed"]
